@@ -12,6 +12,12 @@ static Scanner reader= new Scanner(System.in);
 				b=n%1000;	
 				n=(n-b)/1000;
 				c= String.valueOf(b);
+				if(b<100) {
+					c="0"+c;
+				}
+				if(b<10) {
+					c="0"+c;
+				}
 				str2=" "+c+str1;
 				str1=str2;
 			}
