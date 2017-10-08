@@ -5,11 +5,13 @@ public class Circle {
 	private int xAxis;
 	private int yAxis;
 	
-	Circle (int r, int x, int y){
+	Circle (int r, int x, int y) throws InvalidShapeParametresException{
 		radius=r;
 		xAxis=x;
 		yAxis=y;
-
+		if (r<=0) {
+		throw new InvalidShapeParametresException("ошибка создания круга: неверные данные");
+		}
 	}
 	Circle (int x, int y){
 		xAxis=x;

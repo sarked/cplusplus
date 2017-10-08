@@ -8,13 +8,16 @@ public class Triangle {
 	int cx;
 	int cy;
 	
-	Triangle (int a, int b, int c, int d, int e, int f){
-	ax=a;
-	ay=b;
-	bx=c;
-	by=d;
-	cx=e;
-	cy=f;
+	Triangle (int a, int b, int c, int d, int e, int f) throws InvalidShapeParametresException{
+		ax=a;
+		ay=b;
+		bx=c;
+		by=d;
+		cx=e;
+		cy=f;
+		
+		if ((ax-cx)*(by-cy)==(bx-cx)*(ay-cy)) {throw new InvalidShapeParametresException("ошибка создания треугольника: неверные данные");
+		}
 	}
 	
 	void Perimetr () {
