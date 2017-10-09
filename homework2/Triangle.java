@@ -16,7 +16,7 @@ public class Triangle {
 		cx=e;
 		cy=f;
 		
-		if ((ax-cx)*(by-cy)==(bx-cx)*(ay-cy)) {throw new InvalidShapeParametresException("ошибка создания треугольника: неверные данные");
+		if ((ax-cx)*(by-cy)==(bx-cx)*(ay-cy)) {throw new InvalidShapeParametresException("Invalid parametres");
 		}
 	}
 	

@@ -55,7 +55,7 @@ public class Product {
 		return kiloPrice;
 	}
 	void print() {
-		System.out.println("Данные о товаре:");
+		System.out.println("Product info:");
 		System.out.println(name);
 		System.out.println(mass);
 		System.out.println(price);

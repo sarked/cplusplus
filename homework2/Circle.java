@@ -10,7 +10,7 @@ public class Circle {
 		xAxis=x;
 		yAxis=y;
 		if (r<=0) {
-		throw new InvalidShapeParametresException("ошибка создания круга: неверные данные");
+		throw new InvalidShapeParametresException("Invalid parametres");
 		}
 	}
 	Circle (int x, int y){
