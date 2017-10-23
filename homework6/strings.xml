@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Форма регистрации</string>
+    <string name="form_name">Регистрация в приложении\n</string>
+    <string name="fio">	&#8194;ФИО</string>
+    <string name="personal_data">&#8194;Персональные данные</string>
+    <string name="set_password">&#8194;Придумайте пароль</string>
+    <string name="mailing">&#8194;Рассылка</string>
+    <string name="main_pic">&#9760;</string>
+    <string name="first_name">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronymic">Отчество</string>
+    <string name="age">Возраст</string>
+    <string name="city">Город</string>
+    <string name="tel">Номер телефона</string>
+    <string name="mail">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="rep_password">Повторите пароль</string>
+    <string name="text_mailing">Укажите как часто Вы хотите получать новостную рассылку от нашего сервиса. В рассылку включены рекламные материалы, а также новые проекты по Вашим предпочтениям.</string>
+    <string name="once_day">1 раз в сутки</string>
+    <string name="four_week">4 раза в неделю</string>
+    <string name="once">1 раз в неделю</string>
+    <string name="once_month">1 раз в месяц</string>
+    <string name="twice_month">2 раза в месяц</string>
+    <string name="confirm">Подтверждение регистрации</string>
+    <string name="ageconfirm">На момент регистрации мне исполнилось 16 лет</string>
+    <string name="text_confirm">Я прочитал и согласен с условиями использования сервера</string>
+
+
+
+</resources>
