@@ -194,17 +194,19 @@ public class MainActivity extends AppCompatActivity {
                 if(oper==3){
                     result=d1*d2;}
                 if(oper==4){
-                    //if(b=="0"){
-                    //    view.setText("не срабатывает");
-                    //}else {
+                    if(d2==0.0){
+                        view.setText("невозможно");
+                        return;
+                    }else {
                         result = d1/d2;
-                    // }
+                     }
                 }
                 if(oper==0){
                     return;
                     }
                 b=Double.toString(result);
                 view.setText(b);
+                d2=0;
                 oper=0;
             }
         });
