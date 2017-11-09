@@ -80,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
                         final View view = inflater.inflate(R.layout.time, layout);
                         dialog2.setView(view);
 //ВОПРОС: этот код выбрасывает ошибку.
-                       // TimePicker mTimePicker = (TimePicker) findViewById(R.id.timePicker);
-//                        mTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
-//                            @Override
-//                            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-//                            }
-//                        });
+                        TimePicker mTimePicker = (TimePicker) view.findViewById(R.id.timePicker);
+                        mTimePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+                            @Override
+                            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                            }
+                        });
 
                         dialog2.setPositiveButton("Далее", new DialogInterface.OnClickListener() {
                             @Override
@@ -95,23 +95,73 @@ public class MainActivity extends AppCompatActivity {
                                 dialog3.setTitle ("Ваш заказ:");
                                 //динамически построить чек, подтягиваем лайаут под чек
                                 LayoutInflater inflater=getLayoutInflater();
-                                LinearLayout layout = (LinearLayout)findViewById(R.id.check_layout);
-                                final View view = inflater.inflate(R.layout.check, layout);
-                                dialog3.setView(view);
+                                LinearLayout chlayout = (LinearLayout)findViewById(R.id.check_layout);
+                                final View view = inflater.inflate(R.layout.check, chlayout);
+                                chlayout = (LinearLayout)view.findViewById(R.id.check_layout);
+                               // dialog3.setView(view);
 
 //ВОПРОС:лабуда может с контекстами?  Где активность происходит? Все смешалось - подтягивается лайаут, а потом в него создаются линерлаяуты и элементы и всё это в диалоге в диалоге в кнопке в лаяуте мейнактивности
                                     //тут должен быть итерационный цикл, но пока и так не работает
                                     LinearLayout lay=new LinearLayout(getApplicationContext());
-                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
+                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
                                     lay.setLayoutParams(params);
-                                    lay.setOrientation(LinearLayout.HORIZONTAL);
+                                    lay.setOrientation(LinearLayout.VERTICAL);
 
                                     TextView tx1 = new TextView(getApplicationContext());
-//                                    tx1.setLayoutParams(params);
+                                    tx1.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
                                     tx1.setText("23424234");
 
-                                    lay.addView(tx1);
-                                    layout.addView(lay);
+
+
+                                dialog3.setView(chlayout);
+                               // dialog3.setView(tx1);
+                                //lay.addView(tx1);
+                                chlayout.addView(tx1);
+
+
+//                                //итератор
+//                                for (int i = 0; i < ordered.size(); i++) {
+//                                    //и начинаем создавать сроки для каждого объекта
+//                                    LinearLayout layer1 = new LinearLayout(getApplicationContext());
+//                                    params = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+//                                    layer1.setLayoutParams(params);
+//                                    layer1.setOrientation(LinearLayout.HORIZONTAL);
+//                                    layer1.setPadding(0,20,0,0);
+//                                    //теперь задаем элементы (если понадобится создать элементы ниже по ширине врапконтент, то юзать следующее)
+//                                    //params = new LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
+//
+//                                    TextView ordtxt = new TextView(getApplicationContext());
+//                                    ordtxt.setLayoutParams(params);
+//                                    //эта строка видоизменена ^
+//                                    final String name = ordered.get(i).name;
+//                                    final CharSequence size = String.valueOf(ordered.get(i).size);
+//                                    ordtxt.setText("Пицца: «"+name+"» размер: "+size);
+////
+////
+////                                    //помещаем элементы в нужные лаяуты
+////                                    //lay.addView(tx1);
+////
+//                                    layer1.addView(ordtxt);
+////                                    //layer.addView(tx1);
+//                                    lay.addView(layer1);
+//                                    chlayout.addView(lay);
+////
+//////                                    layer.addView(nametext);
+//////                                    layer.addView(comtext);
+//////                                    secondstring.addView(rg);
+//////                                    secondstring.addView(btn);
+//////                                    layout.addView(layer);
+//////                                    layout.addView(secondstring);
+//                                }
+
+
+                                //кнопочка ОК
+                                dialog3.setPositiveButton("ОК", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                    }
+                                });
 
 
 
