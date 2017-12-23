@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">app3</string>
+    <string name="tax">Tax:</string>
+    <string name="total">Total:</string>
+    <string name="item1">Info</string>
+    <string name="item2">View</string>
+    <string name="item3">Edit</string>
+    <string name="item4">Delete</string>
+    <string name="btntext">Button</string>
+</resources>

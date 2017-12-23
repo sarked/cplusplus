@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">app3</string>
+    <string name="total">Всего:</string>
+    <string name="tax">Налог:</string>
+    <string name="item1">Инфо</string>
+    <string name="item2">Показать</string>
+    <string name="item3">Изменить</string>
+    <string name="item4">Удалить</string>
+    <string name="btntext">Кнопка</string>
+</resources>
