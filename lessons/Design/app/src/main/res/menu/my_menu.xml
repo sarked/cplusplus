@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Кек"
+        android:icon="@drawable/book8" />
+    <item android:title="Лол"
+        android:icon="@mipmap/ic_launcher" />
+    <item android:title="Кек"
+        android:icon="@mipmap/ic_launcher_round" />
+    <item android:title="Лол"
+        android:icon="@drawable/book8" />
+</menu>
